@@ -57,3 +57,17 @@ echo "\n";
 for ($i = 0; $i < $variable_condicional; $i++) {
     echo $i;
 }
+
+//do-while con for
+
+$sandwich = "Hazme un sandwich";
+$mujer = 1;
+
+do {
+    for ($me = 1; $me <= $mujer; $me++) {
+        echo "\n$sandwich\n";
+    }
+    $mujer++;
+    echo "\nAqui tienes tu sandwich\n";
+} while ($mujer >= 0 && $mujer <= 1);
+
