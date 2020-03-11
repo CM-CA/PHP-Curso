@@ -24,7 +24,7 @@ function calcula_descuento($precio_compra)
         $desc = $precio_compra * 0.01;
         $total = $precio_compra - $desc;
         echo "10% desc. - Total: " . $total;
-    } elseif (1500 < $precio_compra && $precio_compra <= 5000) { //Entra
+    } elseif (1500 < $precio_compra and $precio_compra <= 5000) { //Entra
         $desc1 = $precio_compra * 0.015;
         $total1 = $precio_compra - $desc1;
         echo "15% desc. - Total: " . $total1;
@@ -37,7 +37,7 @@ function calcula_descuento($precio_compra)
     }
 }
 
-calcula_descuento(9000);
+calcula_descuento(800);
 
 /* CORRECTIONES 
 

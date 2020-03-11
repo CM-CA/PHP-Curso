@@ -24,7 +24,7 @@ function tipo_triangulo($ladoA, $ladoB, $ladoC)
 
 }
 
-echo tipo_triangulo(4, 4, 4);
+echo tipo_triangulo(4, 3, 4);
 
 /* CORRECCION
 
