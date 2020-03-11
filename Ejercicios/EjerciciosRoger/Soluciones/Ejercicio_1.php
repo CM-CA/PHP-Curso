@@ -38,3 +38,17 @@ function calcula_descuento($precio_compra)
 }
 
 calcula_descuento(9000);
+
+/* CORRECTIONES 
+
+===== elseif (800 >= $precio_compra or 1500 >= $precio_compra) { //Entra en el bucle =====
+
+El comentario no tiene nada que ver con la linea. Los comentarios se usan para aclarar cosas que no sean obvias
+
+¿Por qué en una condición usas "OR" y en otra "&&" (sintaxis)? Usa simbolos o texto, pero no mezcles
+
+Ese código se puede optimizar:
+	- Si llamas a una funcion que se llama calcula_descuento(), la función tiene que hacer lo que dice su nombre, no mostrar nada por pantalla
+	- Fijate que estás repitiendo lineas de código dentros de los IF. Simplifica las cosas y no te repitas
+	- Separa el codigo, usa espacios. Tiene que ser fácil de leer
+*/
