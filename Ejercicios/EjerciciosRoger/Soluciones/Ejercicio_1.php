@@ -19,25 +19,41 @@ NOTA: Ejecuta el codigo como un script y no através de un servidor
 function calcula_descuento($precio_compra)
 {
     if ($precio_compra < 800) {
+
         echo "0% Descuento - Total: " . $precio_compra;
-    } elseif (800 >= $precio_compra or 1500 >= $precio_compra) { //Entra en el bucle
+
+    } elseif (800 >= $precio_compra or 1500 >= $precio_compra) {
+
         $desc = $precio_compra * 0.01;
+
         $total = $precio_compra - $desc;
+
         echo "10% desc. - Total: " . $total;
-    } elseif (1500 < $precio_compra and $precio_compra <= 5000) { //Entra
+
+    } elseif (1500 < $precio_compra and $precio_compra <= 5000) {
+
         $desc1 = $precio_compra * 0.015;
+
         $total1 = $precio_compra - $desc1;
+
         echo "15% desc. - Total: " . $total1;
-    } elseif (5000 < $precio_compra) { //Entra
+
+    } elseif (5000 < $precio_compra) {
+
         $desc2 = $precio_compra * 0.02;
+
         $total2 = $precio_compra - $desc2;
+
         echo "20% desc. - Total: " . $total2;
+
     } else {
+
         echo "Error";
+
     }
 }
 
-calcula_descuento(800);
+calcula_descuento(500);
 
 /* CORRECTIONES 
 
