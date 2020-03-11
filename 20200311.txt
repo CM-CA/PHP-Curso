@@ -1,0 +1,70 @@
+PROBLEMA 1:
+En una tienda departamental ofrecen descuentes a los clientes en la Navidad, de acuerdo con el monto de su compra. El criterio para establecer el descuento se muestra abajo. 
+Construye el correspondiente programa en PHP que, al recibir como parametro el total de la compra del cliente, obtenga el precio real que debe pagar luego de aplicar el descuento
+correspondiente:
+
+Compra < $800 		-> Descuento 0%
+$800 <= Compra >= $1500 -> Descuento 10%
+$1500 < Compra <= $5000 -> Descuento 15%
+$5000 < Compra 		-> Descuento 20%
+
+NOTA: Ejecuta el codigo como un script y no através de un servidor
+
+PROBLEMA 2:
+Crea un programa que al recibir como datos tres variables reales que representan los lados de un probable triangulo, determine si esos lados corresponden a un triangulo. En caso de serlo,
+además de escribir el area correspondiente, compruebe si el mismo es equilatero, isosceles o escaleno.
+
+Consideraciones:
+	· Si se cumple la propiedad de que la suma de los dos lados menores es menor a la del lado restante, es un triángulo
+	· El área se obtiene aplicando la siguiente formula: AREA = raizcuadrada(S*(SA)*(SB)*(SC))
+
+PROBLEMA 3:
+Escribe un programa que, al recibir como dato un numero entero N, calcule el resultado de la siguiente serie:
+	1 + 1/2 + 1/3 + 1/4 + ... + 1/N
+
+PROBLEMA 4:
+Se dice que un numero N es primo si los únicos enteros positivos que lo dividen son exactamente 1 y N. Construye un programa que lea un numero entero positivo N y escriba todos los numeros primos
+menores a dicho número 
+NOTA:
+N tiene que ser un numero entero positivo
+
+PROBLEMA 5:
+Crea un programa que al recibir como dato un número entero positivo, escriba una figura como la que se muestra a continuación
+EJEMPLO:
+Para N = 6
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+PROBLEMA 6: 
+Resuelve otra vez el PROBLEMA 3 utilizando funciones
+
+PROBLEMA 7:
+Crea un programa que recorra el siguiente array multidimensional y muestra por pantalla todos los pares Clave => Valor y especifique el nivel de profundidad en el que se encuentra.
+
+Array("key0" => "A", "key1" => "B", "key2" => "C", "key3" => ["key1" => ["key11" => "valor11", "llave" => "value", "otro" => ["10" => 1, "10000" => 2]]])
+
+EJEMPLO:
+
+Array(1, 2, [1, 2, 3, 4])
+
+Nivel 0:
+· 0 => 1
+· 1 => 2
+· 2 => [1, 2, 3, 4]
+
+Nivel 1:
+· 0 => 1
+· 1 => 2
+· 2 => 3
+· 3 => 4
+
