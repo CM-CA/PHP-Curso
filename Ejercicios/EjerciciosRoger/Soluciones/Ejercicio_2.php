@@ -12,15 +12,16 @@ function Heron($A, $B, $C)
 function tipo_triangulo($ladoA, $ladoB, $ladoC)
 {
     if ($ladoA == $ladoB && $ladoB == $ladoC) { //Todos los lados iguales
-        // $areaEq=Heron($ladoA,$ladoB,$ladoC);
-        echo "Triangulo Equilatero y su area es ";
+        $areaEq = Heron($ladoA, $ladoB, $ladoC);
+        echo "Triangulo Equilatero y su area es " . $areaEq;
     } elseif ($ladoA != $ladoB && $ladoB != $ladoC) { //Todos los lados distintos
-        // $areaEs=Heron($ladoA,$ladoB,$ladoC);
-        echo "Triangulo Escaleno y su area es ";
+        $areaEs = Heron($ladoA, $ladoB, $ladoC);
+        echo "Triangulo Escaleno y su area es " . $areaEs;
     } else { //Dos lados iguales y uno distinto
-        echo "Triangulo Isosceles y su area es ";
+        $areaIs = Heron($ladoA, $ladoB, $ladoC);
+        echo "Triangulo Isosceles y su area es " . $areaIs;
     }
 
 }
 
-echo tipo_triangulo(1, 2, 3) . Heron(1, 2, 3);
+echo tipo_triangulo(4, 4, 4);
