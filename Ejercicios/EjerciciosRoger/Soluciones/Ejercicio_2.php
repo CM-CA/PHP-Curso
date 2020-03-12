@@ -15,27 +15,21 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
 {
     if ($ladoA == $ladoB and $ladoB == $ladoC) { //Todos los lados iguales
 
-        $areaEq = Heron($ladoA, $ladoB, $ladoC);
+        $nombre = "Equilatero";
+        $area = Heron($ladoA, $ladoB, $ladoC);
 
-        echo "Triangulo Equilatero y su area es " . $areaEq;
-
-        return $areaEq;
 
     } elseif ($ladoA != $ladoB and $ladoB != $ladoC and $ladoA != $ladoC) { //Todos los lados distintos
 
-        $areaEs = Heron($ladoA, $ladoB, $ladoC);
+        $nombre = "Escaleno";
+        $area = Heron($ladoA, $ladoB, $ladoC);
 
-        echo "Triangulo Escaleno y su area es ";
-
-        return $areaEs;
 
     } elseif ($ladoA = $ladoB or $ladoB = $ladoC) { //Dos lados iguales y uno distinto
 
-        $areaIs = Heron($ladoA, $ladoB, $ladoC);
+        $nombre = "Isosceles";
+        $area = Heron($ladoA, $ladoB, $ladoC);
 
-        echo "Triangulo Isosceles y su area es ";
-
-        return $areaIs;
 
     } else {
 
@@ -43,9 +37,10 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
 
     }
 
+    return "El triangulo es " . $nombre . " y su area es " . $area;
 }
 
-echo tipoTriangulo(5, 4, 5);
+echo tipoTriangulo(4, 5, 6);
 
 /* CORRECCION 1
 

@@ -23,8 +23,8 @@ Escribe un programa que, al recibir como dato un numero entero N, calcule el res
 	1 + 1/2 + 1/3 + 1/4 + ... + 1/N
 
 PROBLEMA 4:
-Se dice que un numero N es primo si los únicos enteros positivos que lo dividen son exactamente 1 y N. Construye un programa que lea un numero entero positivo N y escriba todos los numeros primos
-menores a dicho número 
+Se dice que un numero N es primo si los únicos enteros positivos que lo dividen son exactamente 1 y N. Construye un
+programa que lea un numero entero positivo N y escriba todos los numeros primos menores a dicho número
 NOTA:
 N tiene que ser un numero entero positivo
 

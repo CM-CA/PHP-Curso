@@ -4,17 +4,19 @@ function serie($numero)
 {
 
     if (0 < $numero) {
-        $contador = 0;
+        $resultado = 0;
         for ($i = 1; $i <= $numero; $i++)
-            $contador += 1 / $i;
-        return $contador;
+            $resultado += 1 / $i;
+        return $resultado;
 
     } else {
         echo "El numero es negativo";
     }
+
+    return "";
 }
 
-echo serie(5);
+echo serie(-5);
 
 /*
 CORRECION 1

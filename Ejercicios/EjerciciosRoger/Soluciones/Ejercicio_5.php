@@ -5,7 +5,7 @@ function arbolito($numero)
     if (0 < $numero) {
 
         if (0 < $numero) {
-//pintamos el escalon del 1 a N
+            //pintamos el escalon del 1 a N
             for ($i = 1; $i <= $numero; $i++) {
 
                 echo "\n";
@@ -16,7 +16,7 @@ function arbolito($numero)
                 }
             }
 
-//Pinta de N a 1
+            //Pinta de N a 1
             for ($i = $numero - 1; $i >= 1; $i--) {
 
                 echo "\n";
@@ -30,7 +30,7 @@ function arbolito($numero)
 
         }
     }
-
+    return "";
 }
 
 

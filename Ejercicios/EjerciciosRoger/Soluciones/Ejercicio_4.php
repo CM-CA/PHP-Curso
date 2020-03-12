@@ -3,14 +3,18 @@
 function primos($numero)
 {
 
-    if (0 < $numero and ($numero % 2) == 0) {
+    if (0 < $numero and is_int($numero)) {
 
+        foreach (range(1, $numero + 1) as $value) {
+            echo $value;
+        }
     } else {
         echo "El numero debe ser positivo y entero";
     }
+
 }
 
-echo primos(2.1);
+echo primos(2);
 
 /*
 CORRECCION 1
