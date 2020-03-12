@@ -3,18 +3,19 @@
 function primos($numero)
 {
 
-    if (0 < $numero and is_int($numero)) {
-
-        foreach (range(1, $numero + 1) as $value) {
-            echo $value;
+    if (0 < $numero && is_int($numero)) { //Comprueba que es mayor que 0 y entero
+        foreach (range($numero, 1) as $value) {
+            if (gmp_prob_prime($value) === 2) {
+                echo $value . ' ';
+            }
         }
     } else {
-        echo "El numero debe ser positivo y entero";
+        echo 'El numero debe ser positivo y entero';
     }
-
+    return '';
 }
 
-echo primos(2);
+echo primos(27);
 
 /*
 CORRECCION 1
