@@ -26,8 +26,11 @@ function tipo_triangulo($ladoA, $ladoB, $ladoC)
 
 echo tipo_triangulo(4, 4, 4);
 
-/* CORRECCION
+/* CORRECCION 1
 
 El funcionamiento es incorrecto. La prueba hecha fue: tipo_triangulo(4,3,4)
 
+CORRECION 2
+
+El funcionamiento es incorrecto. La prueba hecha fue: tipo_triangulo(4,1,1)
 */

@@ -32,3 +32,25 @@ function arbolito($numero)
 
 
 print_r(arbolito(6));
+
+/*
+CORRECCION 1:
+El resultado que genera eso es:
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5 6 5
+1 2 3 4 5 4
+1 2 3 4 3
+1 2 3 2
+1 2 1
+1
+
+El ultimo paso está mal
+
+¿Por qué utilizas print_r() cuando estás usando los echo dentro de los for? Como extra, ya que has descubierto la funcion print_r(),
+quiero que el resultado se pinta con esa función y no con los echo
+*/

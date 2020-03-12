@@ -11,3 +11,9 @@ function primos($numero)
 }
 
 echo primos(2.1);
+
+/*
+CORRECCION 1
+
+El enunciado dice que el calculo se hace con un numero entero, pero tu estás usando un numero real
+*/

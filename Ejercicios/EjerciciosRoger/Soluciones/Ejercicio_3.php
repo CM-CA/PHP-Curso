@@ -15,3 +15,8 @@ function serie($numero)
 }
 
 echo serie(5);
+
+/*
+CORRECION 1
+La variable $contador no es un contador, es un resultado. Llamarla contador incita a confusion.
+*/
