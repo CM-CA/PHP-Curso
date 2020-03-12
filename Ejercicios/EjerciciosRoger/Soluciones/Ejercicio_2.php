@@ -4,43 +4,41 @@ function Heron($A, $B, $C)
 {
     $semiperimetro = ($A + $B + $C) / 2;
 
-    $area = sqrt($semiperimetro * ($semiperimetro - $A) * ($semiperimetro - $B) * ($semiperimetro - $C));
-
-    return $area;
+    return sqrt($semiperimetro * ($semiperimetro - $A) * ($semiperimetro - $B) * ($semiperimetro - $C));
 }
 
 // Determinar triangulos
 
 function tipoTriangulo($ladoA, $ladoB, $ladoC)
 {
-    if ($ladoA == $ladoB and $ladoB == $ladoC) { //Todos los lados iguales
+    if ($ladoA === $ladoB && $ladoB === $ladoC) { //Todos los lados iguales
 
-        $nombre = "Equilatero";
+        $nombre = 'Equilatero';
         $area = Heron($ladoA, $ladoB, $ladoC);
 
 
-    } elseif ($ladoA != $ladoB and $ladoB != $ladoC and $ladoA != $ladoC) { //Todos los lados distintos
+    } elseif ($ladoA !== $ladoB && $ladoB !== $ladoC && $ladoA !== $ladoC) { //Todos los lados distintos
 
-        $nombre = "Escaleno";
+        $nombre = 'Escaleno';
         $area = Heron($ladoA, $ladoB, $ladoC);
 
 
-    } elseif ($ladoA = $ladoB or $ladoB = $ladoC) { //Dos lados iguales y uno distinto
+    } elseif ($ladoC === $ladoB || $ladoA === $ladoC) { //Dos lados iguales y uno distinto
 
-        $nombre = "Isosceles";
+        $nombre = 'Isosceles';
         $area = Heron($ladoA, $ladoB, $ladoC);
 
 
     } else {
 
-        return "error";
+        return 'error';
 
     }
 
-    return "El triangulo es " . $nombre . " y su area es " . $area;
+    return 'El triangulo es ' . $nombre . ' y su area es ' . $area;
 }
 
-echo tipoTriangulo(4, 5, 6);
+echo tipoTriangulo(4, 5, 4);
 
 /* CORRECCION 1
 

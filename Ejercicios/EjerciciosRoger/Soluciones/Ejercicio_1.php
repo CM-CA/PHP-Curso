@@ -20,31 +20,31 @@ function calculaPrecioTotal($precio_compra)
 {
 
     if ($precio_compra < 800) {
-        $descuento = "0";
+        $descuento = '0';
         $total = $precio_compra;
 
-    } elseif (800 >= $precio_compra or 1500 >= $precio_compra) {
+    } elseif (800 >= $precio_compra || 1500 >= $precio_compra) {
         $desc = $precio_compra * 0.01;
         $total = $precio_compra - $desc;
-        $descuento = "10";
+        $descuento = '10';
 
-    } elseif (1500 < $precio_compra and $precio_compra <= 5000) {
+    } elseif (1500 < $precio_compra && $precio_compra <= 5000) {
         $desc1 = $precio_compra * 0.015;
         $total = $precio_compra - $desc1;
-        $descuento = "15";
+        $descuento = '15';
 
     } elseif (5000 < $precio_compra) {
         $desc2 = $precio_compra * 0.02;
         $total = $precio_compra - $desc2;
-        $descuento = "20";
+        $descuento = '20';
 
     } else {
 
-        return "Error";
+        return 'Error';
 
     }
 
-    return $descuento . "% desc. - Total: " . $total;
+    return $descuento . '% desc. - Total: ' . $total;
 }
 
 echo calculaPrecioTotal(1500);
