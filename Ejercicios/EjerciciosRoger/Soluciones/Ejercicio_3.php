@@ -8,16 +8,16 @@ function serie($numero)
         for ($i = 1; $i <= $numero; $i++) {
             $resultado += 1 / $i;
         }
-        return $resultado;
 
+    } else {
+
+        $resultado = 'El numero es negativo';
     }
 
-    echo 'El numero es negativo';
-
-    return '';
+    return $resultado;
 }
 
-echo serie(12);
+echo serie(-12);
 
 /*
 CORRECION 1

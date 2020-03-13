@@ -6,24 +6,22 @@ function arbolito($numero)
         //pintamos el escalon del 1 a N
         for ($i = 1; $i <= $numero; $i++) {
 
-            echo "\n";
-
             for ($j = 1; $j <= $i; $j++) {
 
                 echo $j . ' ';
             }
+            echo "\n";
         }
 
         //Pinta de N a 1
         for ($i = $numero - 1; $i >= 1; $i--) {
 
-            echo "\n";
-
             for ($j = 1; $j <= $i; $j++) {
 
                 echo $j . ' ';
 
             }
+            echo "\n";
         }
 
     }

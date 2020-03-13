@@ -1,5 +1,5 @@
 <?php
-
+/*
 function primos($numero)
 {
 
@@ -16,6 +16,43 @@ function primos($numero)
 }
 
 echo primos(27);
+
+*/
+
+function calculaPrimos($numero)
+{
+    $data = [];
+    //Comprobamos que sea superior a 0, entero.
+    if ($numero > 1 && is_int($numero)) {
+        for ($i = 2; $i <= $numero; $i++) {
+            if ($i === 2) {
+                $data[] = $i;
+                continue;
+            }
+            if ($i % 2 !== 0) {
+                $esprimo = true;
+                for ($j = 0; $j < count($data); $j++) {
+                    echo $i . " ";
+                    print_r($data);
+                    if ($i % $data[$j] === 0) {
+                        $esprimo = false;
+                        break;
+                    }
+                }
+                if ($esprimo === true) {
+                    $data[] = $i;
+                }
+            }
+        }
+
+
+    } else {
+        echo 'El numero debe ser positivo y entero';
+    }
+    return $data;
+}
+
+print_r(calculaPrimos(12));
 
 /*
 CORRECCION 1
