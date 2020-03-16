@@ -15,19 +15,26 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
 
         $nombre = 'Equilatero';
         $area = Heron($ladoA, $ladoB, $ladoC);
-
+        if (is_nan($area) === true) {
+            return 'El triangulo no existe';
+        }
 
     } elseif ($ladoA !== $ladoB && $ladoB !== $ladoC && $ladoA !== $ladoC) { //Todos los lados distintos
 
         $nombre = 'Escaleno';
         $area = Heron($ladoA, $ladoB, $ladoC);
+        if (is_nan($area) === true) {
+            return 'El triangulo no existe';
+        }
 
 
     } elseif ($ladoC === $ladoB || $ladoA === $ladoC) { //Dos lados iguales y uno distinto
 
         $nombre = 'Isosceles';
         $area = Heron($ladoA, $ladoB, $ladoC);
-
+        if (is_nan($area) === true) {
+            return 'El triangulo no existe';
+        }
 
     } else {
 
