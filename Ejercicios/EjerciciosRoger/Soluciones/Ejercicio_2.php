@@ -47,6 +47,7 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
 
 echo tipoTriangulo(4, 1, 1);
 
+
 /* CORRECCION 1
 
 El funcionamiento es incorrecto. La prueba hecha fue: tipo_triangulo(4,3,4)
