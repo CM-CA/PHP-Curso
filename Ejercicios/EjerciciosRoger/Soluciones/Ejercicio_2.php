@@ -38,7 +38,7 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
     return 'El triangulo es ' . $nombre . ' y su area es ' . $area;
 }
 
-echo tipoTriangulo(4, 5, 4);
+echo tipoTriangulo(4, 1, 1);
 
 /* CORRECCION 1
 
