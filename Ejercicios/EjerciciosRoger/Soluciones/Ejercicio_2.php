@@ -39,7 +39,7 @@ function comprobarTriangulo($tA, $tB, $tC)
         return 'Equilatero';
 
     }
-    if (($tB + $tC) == $tA || ($tA + $tC) == $tB || ($tA + $tB) != $tC) {
+    if (($tB + $tC) < $tA || ($tA + $tC) < $tB || ($tA + $tB) < $tC) {
 
         return 'es triangulo';
 
