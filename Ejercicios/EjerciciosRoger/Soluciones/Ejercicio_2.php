@@ -28,7 +28,7 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
         }
 
 
-    } elseif ($ladoC === $ladoB || $ladoA === $ladoC) { //Dos lados iguales y uno distinto
+    } elseif ($ladoC === $ladoB || $ladoA === $ladoC || $ladoA === $ladoB) { //Dos lados iguales y uno distinto
 
         $nombre = 'Isosceles';
         $area = Heron($ladoA, $ladoB, $ladoC);
@@ -45,7 +45,7 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
     return 'El triangulo es ' . $nombre . ' y su area es ' . $area;
 }
 
-echo tipoTriangulo(1, 4, 2);
+echo tipoTriangulo(1, 1, 2);
 
 
 /* CORRECCION 1
