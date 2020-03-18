@@ -11,22 +11,22 @@ function ladomayorTriangulo($lA, $lB, $lC)
 {
     //comprobamos que lado es el mayor
 
-    if ($lA > $lB && $lB <= $lC) {
+    if ($lA >= $lB && $lB >= $lC) {
 
-        return $lA;
+        return 'lado A ' . $lA;
 
-    } elseif ($lB > $lA && $lA >= $lC) {
+    } elseif ($lB >= $lA && $lA >= $lC) {
 
-        return $lB;
+        return 'lado B ' . $lB;
 
-    } elseif ($lC > $lB && $lB >= $lA) {
+    } elseif ($lC >= $lB && $lB >= $lA) {
 
-        return $lC;
+        return 'lado C ' . $lC;
 
     } else {
         return 'No es triangulo';
     }
-
+//comprobarTriangulo($lA,$lB,$lC);
 }
 
 function comprobarTriangulo($tA, $tB, $tC)
@@ -39,7 +39,7 @@ function comprobarTriangulo($tA, $tB, $tC)
         return 'Equilatero';
 
     }
-    if (($tB + $tC) < $tA || ($tA + $tC) < $tB || ($tA + $tB) < $tC) {
+    if (($tB + $tC) < $tA && ($tA + $tC) < $tB && ($tA + $tB) < $tC) {
 
         return 'es triangulo';
 
@@ -103,8 +103,8 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
     return 'El triangulo es ' . $nombre . ' y su area es ' . $area;
 }*/
 
-echo ladomayorTriangulo(2, 3, 1);
-echo comprobarTriangulo(4, 3, 4);
+echo ladomayorTriangulo(2, 3, 2);
+//echo comprobarTriangulo(4, 3, 4);
 //echo tipoTriangulo(4, 1, 1);
 
 
