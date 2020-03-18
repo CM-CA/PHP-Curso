@@ -7,42 +7,50 @@ function Heron($A, $B, $C)
     return sqrt($semiperimetro * ($semiperimetro - $A) * ($semiperimetro - $B) * ($semiperimetro - $C));
 }
 
-function comprobarTriangulo($lA, $lB, $lC)
+function ladomayorTriangulo($lA, $lB, $lC)
 {
-    // Si se cumple la propiedad de que la suma de los dos lados menores es menor a la del lado restante, es un triángulo.
+    //comprobamos que lado es el mayor
 
+    if ($lA > $lB && $lB <= $lC) {
 
-    if ($lB < $lC || $lC < $lA) {
+        return $lA;
 
-        $resultadoA = $lB + $lC;
+    } elseif ($lB > $lA && $lA >= $lC) {
 
-        if ($resultadoA < $lA) {
+        return $lB;
 
-            return true;
-        }
-    } elseif ($lA < $lC || $lB < $lA) {
+    } elseif ($lC > $lB && $lB >= $lA) {
 
-        $resultadoB = $lA + $lC;
+        return $lC;
 
-        if ($resultadoB < $lB) {
-
-            return true;
-        }
-    } elseif ($lC < $lB || $lC < $lA) {
-
-        $resultadoC = $lA + $lB;
-
-        if ($resultadoC < $lC) {
-
-            return true;
-        }
+    } else {
+        return 'No es triangulo';
     }
 
-    return false;
 }
 
-// Determinar triangulos
+function comprobarTriangulo($tA, $tB, $tC)
+{
+    // Si se cumple la propiedad de que la suma de los dos lados menores es menor a la del lado restante, es un triángulo.
+    // comprobar equilatero. todos lados iguales.
 
+    if ($tA == $tB && $tB == $tC) {
+
+        return 'Equilatero';
+
+    }
+    if (($tB + $tC) == $tA || ($tA + $tC) == $tB || ($tA + $tB) != $tC) {
+
+        return 'es triangulo';
+
+    } else {
+
+        return 'No es un triangulo';
+
+    }
+}
+// Determinar triangulos
+/*
 function tipoTriangulo($ladoA, $ladoB, $ladoC)
 {
     if ($ladoA === $ladoB && $ladoB === $ladoC) { //Todos los lados iguales
@@ -93,10 +101,11 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
     }
 
     return 'El triangulo es ' . $nombre . ' y su area es ' . $area;
-}
+}*/
 
-echo comprobarTriangulo(4, 4, 1);
-echo tipoTriangulo(4, 1, 1);
+echo ladomayorTriangulo(2, 3, 1);
+echo comprobarTriangulo(4, 3, 4);
+//echo tipoTriangulo(4, 1, 1);
 
 
 /* CORRECCION 1
