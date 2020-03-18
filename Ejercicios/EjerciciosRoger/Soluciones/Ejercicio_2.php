@@ -16,7 +16,7 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
         $nombre = 'Equilatero';
         $area = Heron($ladoA, $ladoB, $ladoC);
         if (is_nan($area) === true) {
-            return 'El triangulo no existe';
+            return 'El triangulo es ' . $nombre . ' y su area no se puede calcular';
         }
 
     } elseif ($ladoA !== $ladoB && $ladoB !== $ladoC && $ladoA !== $ladoC) { //Todos los lados distintos
@@ -24,7 +24,7 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
         $nombre = 'Escaleno';
         $area = Heron($ladoA, $ladoB, $ladoC);
         if (is_nan($area) === true) {
-            return 'El triangulo no existe';
+            return 'El triangulo es ' . $nombre . ' y su area no se puede calcular';
         }
 
 
@@ -33,7 +33,7 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
         $nombre = 'Isosceles';
         $area = Heron($ladoA, $ladoB, $ladoC);
         if (is_nan($area) === true) {
-            return 'El triangulo no existe';
+            return 'El triangulo es ' . $nombre . ' y su area no se puede calcular';
         }
 
     } else {
@@ -45,7 +45,7 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
     return 'El triangulo es ' . $nombre . ' y su area es ' . $area;
 }
 
-echo tipoTriangulo(4, 1, 1);
+echo tipoTriangulo(1, 4, 2);
 
 
 /* CORRECCION 1
