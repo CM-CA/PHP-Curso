@@ -15,15 +15,23 @@ function comprobarNumero($numero)
         foreach ($arrayNumeros as $key => $item) {
             if ($key >= 4) {
                 printf('Te has pasado');
-            } else {
-
             }
         }
+        for ($i = 0; $i < count($arrayNumeros); $i++) {
+            $numeroArray = $arrayNumeros[$i];
+            $finalComprobacion = calcularPar($numeroArray);
+            if ($finalComprobacion === false) {
+                echo 'El numero no es valido';
+                break;
+            }
+        }
+
     } else {
         return 'El numero debe ser entero';
     }
+    return 'El numero es valido';
 }
 
-echo comprobarNumero(12345);
+echo comprobarNumero(2124);
 
 
