@@ -15,31 +15,19 @@ function comprobarNumero($numero)
 {
     if (is_int($numero)) {
 
-        $arrayNumeros = str_split($numero);
+    for ($i = 0; $i < count(str_split($numero)); $i++) {
 
-        /* foreach ($arrayNumeros as $key => $item) {
+        $numeroArray = $numero[$i];
 
-             if ($key >= 4) {
+        $finalComprobacion = calcularPar($numeroArray);
 
-                return false;
+        if ($finalComprobacion === false) {
 
-             }
+            return false;
 
-         }*/
+            break;
 
-        for ($i = 0; $i < count($arrayNumeros); $i++) {
-
-            $numeroArray = $arrayNumeros[$i];
-
-            $finalComprobacion = calcularPar($numeroArray);
-
-            if ($finalComprobacion === false) {
-
-                return false;
-
-                break;
-
-            }
+        }
         }
 
     } else {
