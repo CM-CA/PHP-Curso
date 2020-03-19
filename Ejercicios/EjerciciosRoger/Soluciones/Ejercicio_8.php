@@ -14,14 +14,14 @@ function comprobarNumero($numero)
         $arrayNumeros = str_split($numero);
         foreach ($arrayNumeros as $key => $item) {
             if ($key >= 4) {
-                printf('Te has pasado');
+               return false;
             }
         }
         for ($i = 0; $i < count($arrayNumeros); $i++) {
             $numeroArray = $arrayNumeros[$i];
             $finalComprobacion = calcularPar($numeroArray);
             if ($finalComprobacion === false) {
-                echo 'El numero no es valido';
+                return false;
                 break;
             }
         }
@@ -29,9 +29,18 @@ function comprobarNumero($numero)
     } else {
         return 'El numero debe ser entero';
     }
-    return 'El numero es valido';
+    return true;
 }
 
-echo comprobarNumero(2124);
+function esVerdadero($numero)
+{
+    if (comprobarNumero($numero) === true) {
+        return 'Numero correcto ';
+    } else {
+        return 'Numero incorrecto';
+    }
+}
 
+
+echo esVerdadero(2224);
 
