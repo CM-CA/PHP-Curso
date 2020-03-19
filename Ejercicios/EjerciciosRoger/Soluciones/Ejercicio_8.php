@@ -13,7 +13,7 @@ function comprobarNumero($numero)
     if (is_int($numero)) {
         $arrayNumeros = str_split($numero);
         foreach ($arrayNumeros as $key => $item) {
-            if ($key >= 5) {
+            if ($key >= 4) {
                 printf('Te has pasado');
             } else {
 
