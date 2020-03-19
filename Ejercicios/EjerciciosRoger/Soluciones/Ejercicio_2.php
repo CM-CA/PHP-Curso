@@ -26,7 +26,7 @@ function ladomayorTriangulo($lA, $lB, $lC)
     } else {
         return 'No es triangulo';
     }
-//comprobarTriangulo($lA,$lB,$lC);
+
 }
 
 function comprobarTriangulo($tA, $tB, $tC)
@@ -39,14 +39,8 @@ function comprobarTriangulo($tA, $tB, $tC)
         return 'Equilatero';
 
     }
-    if (($tB + $tC) < $tA && ($tA + $tC) < $tB && ($tA + $tB) < $tC) {
-
-        return 'es triangulo';
-
-    } else {
-
-        return 'No es un triangulo';
-
+    if (($tB + $tC) < $tA) {
+        return 'triangulo';
     }
 }
 // Determinar triangulos
@@ -103,8 +97,8 @@ function tipoTriangulo($ladoA, $ladoB, $ladoC)
     return 'El triangulo es ' . $nombre . ' y su area es ' . $area;
 }*/
 
-echo ladomayorTriangulo(2, 3, 2);
-//echo comprobarTriangulo(4, 3, 4);
+//echo ladomayorTriangulo(2, 3, 2);
+echo comprobarTriangulo(3, 3, 4);
 //echo tipoTriangulo(4, 1, 1);
 
 

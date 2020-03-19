@@ -68,3 +68,8 @@ Nivel 1:
 · 2 => 3
 · 3 => 4
 
+PROBLEMA 8: Crea un programa que reciba como dato un numero entero de cuatro digitos y determine si todos los digitos
+del numero son pares.
+
+por ejemplo: 5688 es un numero invalido puesto que el 5 es impar
+el programa tiene que devolver si el numero es valido o no
